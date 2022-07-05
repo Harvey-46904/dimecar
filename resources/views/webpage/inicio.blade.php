@@ -27,7 +27,9 @@
       </div>
     </div>
   </section><!-- End Hero -->
+
 <main id="main">
+  <!-- End Hero 
 <section id="book-a-table" class="book-a-table">
     <div class="container " data-aos="fade-up">
 
@@ -80,7 +82,10 @@
       </form>
 
     </div>
-  </section><!-- End Book A Table Section -->
+  </section>
+-->
+  
+  <!-- End Book A Table Section -->
   <section id="events" class="events">
     <div class="container" data-aos="fade-up">
 
