@@ -79,9 +79,7 @@ Route::get('rentacar-index', function () {
     return view('webpage.index');
 });
 
-Route::get('/', function () {
-    return view('webpage.inicio');
-})->name("inicio");
+Route::get('/', "VehiculosController@vehiculos_inicio")->name("inicio");
 
 Route::get('site1', function () {
     return view('webpage.base-completa');

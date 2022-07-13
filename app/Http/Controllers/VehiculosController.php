@@ -25,6 +25,14 @@ class VehiculosController extends Controller
        
     }
 
+    public function vehiculos_inicio(){
+        $vehiculos=DB::table('vehiculos')
+        ->select()
+        ->orderBy('precio_alquiler')
+        ->get();
+        return view('webpage.inicio',compact("vehiculos"));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

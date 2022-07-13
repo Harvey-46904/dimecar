@@ -29,7 +29,7 @@
   </section><!-- End Hero -->
 
 <main id="main">
-  <!-- End Hero 
+  
 <section id="book-a-table" class="book-a-table">
     <div class="container " data-aos="fade-up">
 
@@ -83,7 +83,7 @@
 
     </div>
   </section>
--->
+
   
   <!-- End Book A Table Section -->
   <section id="events" class="events">
@@ -91,48 +91,50 @@
 
       <div class="section-title">
         <h2>ALQUILER DE AUTOS EN CALI</h2>
-        <p>RESERVE AHORA Y OBTENGA LA MEJOR OFERTA</p>
+        <p>Catalogo de autos</p>
       </div>
 
       <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+      
+           
+      
+        <!--  testimonial item -->
         <div class="swiper-wrapper">
-
+          @foreach ($vehiculos as $vehiculo)
           <div class="swiper-slide">
             <div class="row event-item justify-content-center">
               <div class="col-lg-2 pt-4 pt-lg-0 content">
-                <h2>KIA RIO</h2>
+                <h2>{{$vehiculo->nombre_vehiculo}}</h2>
                 <div class="price">
-                  <p><span>$220.000/dia</span></p>
+                  <p><span>${{ number_format($vehiculo->precio_alquiler, 0)}}/dia</span></p>
                 </div>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore
-                  magna aliqua.
+                  Presentamos el {{$vehiculo->nombre_vehiculo}} un vehículo para compartir con toda su familia y 
+                  vivir una nueva aventura
                 </p>
                 <p>
                   <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">RESERVAR AHORA</a>
                 </p>
               </div>
               <div class="col-lg-6">
-                <img src="{!! asset('webpagedimecar/assets/img/car.png') !!}" class="img-fluid" alt="">
+                <img src="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}" class="img-fluid" alt="">
               </div>
               <div class="col-lg-3 pt-3 pt-lg-0 content">
                 <div class="row">
-                  <p> <i class="bi bi-geo-alt"></i><b> PUERTAS:</b> 4</p>
-                  <p> <i class="bi bi-geo-alt"></i><b> PASAJEROS:</b> 5</p>
+                  <p> <i class="bi bi-geo-alt"></i><b> PUERTAS:</b> 5</p>
+                  <p> <i class="bi bi-geo-alt"></i><b> PASAJEROS:</b> {{$vehiculo->pasajeros}}</p>
                   <p> <i class="bi bi-geo-alt"></i><b> EQUIPAJE:</b> 2 MALETAS</p>
                   <p> <i class="bi bi-geo-alt"></i><b> AIRE ACONDICIONADO:</b> SI</p>
-                  <p> <i class="bi bi-geo-alt"></i><b> EDAD MÍNIMA:</b> dfasdkj</p>
-                  <p> <i class="bi bi-geo-alt"></i><b> TRANSMISIÓN:</b> 23</p>
+                  <p> <i class="bi bi-geo-alt"></i><b> EDAD MÍNIMA:</b> 21</p>
+                  <p> <i class="bi bi-geo-alt"></i><b> TRANSMISIÓN:</b> {{$vehiculo->caja}}</p>
                   <p> <i class="bi bi-geo-alt"></i><b> TIPO DE COMBUSTIBLE:</b> GASOLINA</p>
-
                 </div>
-
               </div>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
+          <!-- End testimonial item -->
 
-
+          @endforeach
         </div>
         <div class="swiper-pagination"></div>
       </div>
