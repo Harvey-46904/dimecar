@@ -15,7 +15,7 @@
           <h2>Siempre habrá un nuevo lugar por RECORRER , Estamos a tu servicio</h2>
 
           <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto mb-1">LISTA DE CARROS</a>
+            <a href="#events" class="btn-menu animated fadeInUp scrollto mb-1">LISTA DE CARROS</a>
             <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">RESERVAR AHORA</a>
           </div>
         </div>
@@ -29,7 +29,7 @@
   </section><!-- End Hero -->
 
 <main id="main">
-  
+  <!-- End Hero 
 <section id="book-a-table" class="book-a-table">
     <div class="container " data-aos="fade-up">
 
@@ -83,7 +83,7 @@
 
     </div>
   </section>
-
+-->
   
   <!-- End Book A Table Section -->
   <section id="events" class="events">
