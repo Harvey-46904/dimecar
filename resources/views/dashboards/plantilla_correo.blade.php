@@ -3,26 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Plantilla Correo Rentacar</title>
+    <title>Plantilla Correo Dimecars</title>
 </head>
 
 <body>
     <font style = "font-family:arial;">
     <div align="center">
         
-        <img src="https://rentacarpasto.com/dash/images/banner-correo.png" alt="Logo" width="100%" height="250">
+        <img src="https://dimecars.com.co/dash/images/banner-correo.png" alt="Logo" width="100%" height="250">
     </div>
    
     <div align="center"> 
-    <hr width=900 color=#C52121>
-   <a href="https://api.whatsapp.com/send?phone=573227795422&text=🚨🚗VALIDAR%20RESERVA🚗🚨%0AHola%20RENT%20A%20CAR%0Asoy%20{{$cliente->nombres}}%20{{$cliente->apellidos}}%0Adeseo%20validar%20mi%20reserva%20con%20serial%20%23{{$reservas->id_reserva}}%20🏁." style="background-color: #4CAF50;" ><h3>¡CLICK AQUI PARA VALIDAR TU RESERVA!</h3></a>
-    <hr width=900 color=#C52121>
+    <hr width=900 color=#202020>
+   <a href="https://api.whatsapp.com/send?phone=573105456455&text=🚨🚗VALIDAR%20RESERVA🚗🚨%0AHola%20RENT%20A%20CAR%0Asoy%20{{$cliente->nombres}}%20{{$cliente->apellidos}}%0Adeseo%20validar%20mi%20reserva%20con%20serial%20%23{{$reservas->id_reserva}}%20🏁." style="background-color: #4CAF50;" ><h3>¡CLICK AQUI PARA VALIDAR TU RESERVA!</h3></a>
+    <hr width=900 color=#202020>
     </div>
     
     <div align="center">
-        <hr width=900 color=#C52121>
+        <hr width=900 color=#202020>
         <h3>INFORMACIÓN CLIENTE</h3>
-        <hr width=900 color=#C52121>
+        <hr width=900 color=#202020>
     </div>
 
     <div align=center>
@@ -106,11 +106,11 @@
             </tr>
         </table>
     </div>
-    <hr width=900 color=#C52121>
+    <hr width=900 color=#202020>
 
     <div align="center">
         <h3>INFORMACIÓN VEHÍCULO</h3>
-        <hr width=900 color=#C52121>
+        <hr width=900 color=#202020>
     </div>
 
     <div align=center>
@@ -193,10 +193,10 @@
 
         </table>
     </div>
-    <hr width=900 color=#C52121>
+    <hr width=900 color=#202020>
     <div align="center">
         <h3>INFORMACIÓN RESERVA</h3>
-        <hr width=900 color=#C52121>
+        <hr width=900 color=#202020>
     </div>
     <div>
         <div align="center">
@@ -280,7 +280,7 @@
                 </tr>
                
             </table>
-            <hr width=900 color=#C52121>
+            <hr width=900 color=#202020>
         </div>
     </div>
 
@@ -316,7 +316,7 @@
                             <ul>
                                 <li>Cubre 90%</li>
                                 <li>Deducible el 10% a responsabilidad del cliente deducible: $ 1.000.000</li>
-                                <li><b>Rent A Car Pasto no hace devolución del valor de la reserva, el valor puede ser utilizado para otra reserva.</b></li>
+                                <li><b>Dimecars Pasto no hace devolución del valor de la reserva, el valor puede ser utilizado para otra reserva.</b></li>
                                <li>El valor bloqueado de su tarjeta de crédito permanecerá bloqueado durante la renta, al momento de finalizar el servicio, se solicita el desbloqueo a la franquicia correspondiente, por favor tener en cuenta que este tramite tarda entre 1 a 5 días hábiles dependiendo del del banco emisor.</li>
                             </ul>
                             <br><br>
@@ -337,22 +337,22 @@
                         <p>
                             ___________________________________
                             <br>
-                            AMANDA ELIZABETH BASTIDAS
+                           Nombres
                             <br>
                             Gerente administrativo
                             <br>
-                            Cel. 3204408344
+                            Cel. 
                         </p>
                     </th>
                 </tr>
 
             </table>
-            <hr width=900 color=#C52121>
+            <hr width=900 color=#202020>
         </div>
     </div>
 
     <div align="center">
-        RENT A CAR PASTO. Cel: 320 440 8344 www.rentacarpasto.com
+       DIMECARS. Cel: 310 545 6455 www.dimecars.com.co
     </div>
 </font>
 </body>
