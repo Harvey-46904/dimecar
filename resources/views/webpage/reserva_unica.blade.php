@@ -76,11 +76,11 @@
                             list($transporte_recogida,$transporte_precio1)=asignar_lugar_precio($transporte_recogida);
                             ?>
                             <div class="row  mb-1">
-                                <div class="col-md-6 col-4 bg-light text-dark">Lugar Entrega<br>{{$transporte_entrega }}</div>
+                                <div class="col-md-6 col-4 bg-light text-dark">Lugar Entrega<br>{{$transporte_entrega=="Pasto"?"Cali":"Aeropuerto Alfonso Bonilla Aragon" }}</div>
                                 <div class="col-md-6 col-8 bg-black text-light align-items-center"><h5>${{$transporte_precio }}</h5></div>
                             </div>
                             <div class="row  mb-1">
-                                <div class="col-md-6 col-4 bg-light text-dark">Lugar Recogida<br>{{$transporte_recogida }} </div>
+                                <div class="col-md-6 col-4 bg-light text-dark">Lugar Recogida<br>{{$transporte_recogida =="Pasto"?"Cali":"Aeropuerto Alfonso Bonilla Aragon" }} </div>
                                 <div class="col-md-6 col-8 bg-black text-light align-items-center"><h5>${{$transporte_precio1 }}</h5></div>
                             </div>
                             <div class="row  mb-1">

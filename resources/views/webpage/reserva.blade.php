@@ -13,9 +13,9 @@
          
         </div>
         <div class="row justify-content-center mb-5">
-            <div class="col-md-3 col-6 bg-light text-dark mx-1 mt-1"><h5>Lugar de entrega: {{$todo["lugar_entrega"]}}</h5></div>
+            <div class="col-md-3 col-6 bg-light text-dark mx-1 mt-1"><h5>Lugar de entrega: {{$todo["lugar_entrega"]=="Pasto"?"Cali":"Aeropuerto Alfonso Bonilla Aragon"}}</h5></div>
             <div class="col-md-2 col-4 bg-light text-dark mx-1 mt-1"><h5>{{$todo["desdes"]}}</h5></div>
-            <div class="col-md-3 col-6 bg-light text-dark mx-1 mt-1"><h5>Lugar de recogida: {{$todo["lugar_recogida"]}}</h5></div>
+            <div class="col-md-3 col-6 bg-light text-dark mx-1 mt-1"><h5>Lugar de recogida: {{$todo["lugar_recogida"]=="Pasto"?"Cali":"Aeropuerto Alfonso Bonilla Aragon"}}</h5></div>
             <div class="col-md-2 col-4 bg-light text-dark mx-1 mt-1"><h5>{{$todo["hastas"]}}</h5></div>
          </div>
         <!--INICIO CICLO-->

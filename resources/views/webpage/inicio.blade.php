@@ -21,7 +21,7 @@
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
           data-aos-delay="200">
-          <a href="https://video.xx.fbcdn.net/v/t42.9040-2/120525262_3110252832434437_2502251502089696628_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=985c63&efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&_nc_eui2=AeE5mZ47C-k_L8WDlJYPsU-cPSGJ3dwJm3w9IYnd3AmbfELLr0Ksw-wDF0t7Nvxlp0QoudbFRqtOHIilyoiqWqL5&_nc_ohc=4VShAXhfXMAAX_oDvfr&_nc_oc=AQnblPNszDhGeJawBJ1juGjm31Rb53rcTbiFTHR-aybGCIj35yAT3xa8cI42K14VTIk&_nc_rml=0&_nc_ht=video.fclo7-1.fna&oh=00_AT_gNsNNOZfpya96UGJKylzHa8O6kPqn7XzP75Tk3Zuk6w&oe=6297F7FE" class="glightbox play-btn"></a>
+          <a href="{!! asset('webpagedimecar/assets/img/video.mp4') !!}" class="glightbox play-btn"></a>
         </div>
 
       </div>
@@ -29,7 +29,7 @@
   </section><!-- End Hero -->
 
 <main id="main">
-  <!-- End Hero 
+  <!-- End Hero -->
 <section id="book-a-table" class="book-a-table">
     <div class="container " data-aos="fade-up">
 
@@ -46,9 +46,9 @@
             <label for="exampleFormControlSelect1">RECOGER</label>
             <select class="form-control" id="lugar-entrega" name="lugar_entrega">
               <option disabled selected>Lugar de entrega</option>
-              <option value="Pasto">Pasto</option>
-              <option value="Aeropuerto-Pasto">Pasto - Aeropuerto Antonio Nariño</option>
-              <option value="Aeropuerto-Ipiales">Ipiales - Aeropuerto San Luis</option>
+              <option value="Pasto">Cali</option>
+              <option value="Aeropuerto-Pasto">Cali - Aeropuerto Alfonso Bonilla Aragon</option>
+             
             </select>
           </div>
           <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
@@ -57,15 +57,15 @@
           </div>
           <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
             <label for="exampleFormControlSelect1">HORA DE RECOGIDA</label><br>
-            <input type="time" id="hora_entrega" name="hora_entrega" min="09:00" max="18:00" required>
+            <input type="time" id="hora_entrega" name="hora_entrega" required>
           </div>
           <div class="col-lg-4 col-md-6 form-group mt-3">
             <label for="exampleFormControlSelect1">DEVOLUCIÓN</label>
             <select class="form-control" id="lugar-recogida" name="lugar_recogida">>
               <option disabled selected>Lugar de recogida</option>
-                  <option value="Pasto">Pasto</option>
-                  <option value="Aeropuerto-Pasto">Pasto - Aeropuerto Antonio Nariño</option>
-                  <option value="Aeropuerto-Ipiales">Ipiales - Aeropuerto San Luis</option>
+                  <option value="Pasto">Cali</option>
+                  <option value="Aeropuerto-Pasto">Cali - Aeropuerto Alfonso Bonilla Aragon</option>
+                
             </select>
           </div>
           <div class="col-lg-4 col-md-6 form-group mt-3">
@@ -74,7 +74,7 @@
           </div>
           <div class="col-lg-4 col-md-6 form-group mt-3">
             <label for="exampleFormControlSelect1">HORA DE DEVOLUCIÓN</label><br>
-            <input type="time" id="hora_recogida" name="hora_recogida" min="09:00" max="18:00" required>
+            <input type="time" id="hora_recogida" name="hora_recogida"  required>
           </div>
         </div>
        
@@ -83,7 +83,7 @@
 
     </div>
   </section>
--->
+
   
   <!-- End Book A Table Section -->
   <section id="events" class="events">
