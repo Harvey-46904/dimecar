@@ -149,8 +149,17 @@ Route::post('actualizar_cliente_unico/{id}', "ClientesController@update")->name(
 
 Route::post('actualizar_vehiculo/{id}', "EstadoVehiculoController@update")->name('actualizar_vehiculo');
 
+//GESTION ENTRADAS Y SALIDAS
+Route::get('entrada_salida',"TipoContableController@index");
+Route::post('entrada_salida',"TipoContableController@store")->name('crear_tipo');
+//libro contable
+Route::get('libro_contable',"LibroContabilidadController@index");
+Route::post('consulta_contable',"LibroContabilidadController@consulta")->name('consulta_contable');
+Route::post('registrar_libro',"LibroContabilidadController@store")->name('registrar_libro');
 
-
+Route::get('contabilidad',"LibroContabilidadController@libro")->name("contabilidad");
+Route::get('contabilidad/{id}',"LibroContabilidadController@mirar_libro")->name("contabilidad_unica");
+Route::post('libro_contable',"LibroContabilidadController@store")->name('crear_contabilidad');
 //descargar imagenes
 
 Route::get('storage/{archivo}', function ($nombre) {
@@ -168,6 +177,8 @@ Route::get('storage/{archivo}', function ($nombre) {
 Route::get('notificaciones',"NotificacionesController@index");
 Route::get('notificacionesupdate/{id}',"NotificacionesController@update");
 Route::get('crear_notificaciones',"NotificacionesController@crear_notificaciones");
+
+Route::get('contrato',"RegistroContratoController@mirar_contrato");
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

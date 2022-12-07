@@ -187,6 +187,9 @@ class RegistroContratoController extends Controller
     {
         //
     }
+    public function mirar_contrato(){
+        return view("dashboards.contrato");
+    }
 
     public function generar_pdf($data){
         

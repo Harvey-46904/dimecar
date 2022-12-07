@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Dimecars</title>
     <!-- Favicon <link rel="icon" href="favicon.ico" type="image/x-icon">-->
-    <link rel="icon" href="{!! asset('favicon.ico') !!}" type="image/x-icon">
+    <link rel="icon" href="{!! asset('favicon.png') !!}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
@@ -38,7 +38,7 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{!! asset('dash/css/themes/all-themes.css') !!}" rel="stylesheet" />
-
+    <link rel="stylesheet" type="text/css" href="{!! asset('dash/css/jquery.dataTables.min.css') !!}"/>
     <!--Icon webpage-->
     <link rel="icon" href="{!! asset('webpage/img/icon-webpage.png') !!}" />
     <style>span.blue {
@@ -220,7 +220,29 @@ $data=$data["data"];
                             </li>
                         </ul>
                     </li>
-                     
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">done_all</i>
+                            <span>Contabilidad</span>
+                        </a>
+                        <ul class="ml-menu">
+                            
+                            <li>
+                                <a href="{{ url('contabilidad') }}">Libro Contable</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">point_of_sale</i>
+                            <span>Configuracion</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="{{ url('entrada_salida') }}">Entradas/Salidas</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- #Menu -->
@@ -301,7 +323,12 @@ $data=$data["data"];
     <script src="{!! asset('dash/js/demo.js') !!}"></script>
     <script src="{!! asset('dash/js/moment.min.js') !!}"></script>
     <script src="{!! asset('dash/js/script.js') !!}"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/>
+ 
+ <script type="text/javascript" src="{!! asset('dash/js/jquery.dataTables.min.js') !!}"></script>
+ 
+    <script src="{!! asset('dash/js/chart.min.js') !!}" ></script>
+    <script src="{!! asset('dash/js/contabilidad.js') !!}"></script>
 </body>
 
 </html>
