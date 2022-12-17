@@ -160,6 +160,8 @@ Route::post('registrar_libro',"LibroContabilidadController@store")->name('regist
 Route::get('contabilidad',"LibroContabilidadController@libro")->name("contabilidad");
 Route::get('contabilidad/{id}',"LibroContabilidadController@mirar_libro")->name("contabilidad_unica");
 Route::post('libro_contable',"LibroContabilidadController@store")->name('crear_contabilidad');
+Route::post('filtro_fecha/{id}',"LibroContabilidadController@mirar_libro_fecha")->name('filtro_fecha');
+
 //descargar imagenes
 
 Route::get('storage/{archivo}', function ($nombre) {

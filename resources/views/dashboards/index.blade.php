@@ -327,7 +327,7 @@ $data=$data["data"];
  
  <script type="text/javascript" src="{!! asset('dash/js/jquery.dataTables.min.js') !!}"></script>
  
-    <script src="{!! asset('dash/js/chart.min.js') !!}" ></script>
+   
     <script src="{!! asset('dash/js/contabilidad.js') !!}"></script>
 </body>
 

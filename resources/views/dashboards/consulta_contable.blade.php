@@ -1,6 +1,13 @@
 
 @extends('dashboards.index')
+<script>
+  $(document).ready(
+       graficar()
+    )
+</script>
+   
 @section('registro_clientes')
+
     <section class="content">
         <div class="container-fluid ">
 
@@ -22,9 +29,30 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>
-                                Estadistica de {{ $vehiculi->nombre_vehiculo }}==={{ $vehiculi->placa }}
-                            </h2>
+                        <form method="POST" action="{{ route('filtro_fecha', $vehiculi->id_vehiculo) }}" >
+                        @csrf
+                        <div class="row justify-content-center">
+                                       
+                                        <div class="col-md-3 ">
+                                            <label for="nombre_vehiculo">Desde</label>
+                                            <div class="form-group">
+                                                <input class="form-control" type="date" id="d" name="desde">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 "> <label for="nombre_vehiculo">Hasta</label>
+                                            <div class="form-group">
+                                                <input class="form-control" type="date" id="h" name="hasta">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 text-center"> <br>
+                                            <div class="form-group">
+                                                <input class="btn btn-primary " type="submit" id="h" value="Filtrar">
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+
+                                    </form>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
@@ -52,7 +80,7 @@
                                         <div class="col-md-4">
                                             <div class="info-box-4 hover-zoom-effect">
                                                 <div class="icon">
-                                                    <i class="material-icons col-red">call_made</i>
+                                                    
                                                 </div>
                                                 <div class="content">
                                                     <div class="text text-success">Ingresos</div>
@@ -63,7 +91,7 @@
                                         <div class="col-md-4">
                                             <div class="info-box-4 hover-zoom-effect">
                                                 <div class="icon">
-                                                    <i class="material-icons col-red">call_received</i>
+                                                
                                                 </div>
                                                 <div class="content">
                                                     <div class="text text-danger">Egresos</div>
@@ -74,7 +102,7 @@
                                         <div class="col-md-4">
                                             <div class="info-box-4 hover-zoom-effect">
                                                 <div class="icon">
-                                                    <i class="material-icons col-red">compare_arrows</i>
+                                                  
                                                 </div>
                                                 <div class="content">
                                                     <div class="text text-primary">Utilidad</div>
@@ -94,7 +122,7 @@
         </div>
     </section>
 
-
+<!--
     <section class="content">
         <div class="container-fluid">
             <div class="row clearfix">
@@ -135,7 +163,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="content">
         <div class="container-fluid">
             <div class="row clearfix">
@@ -179,7 +207,7 @@
                                     <tbody>
                                         @foreach ($entradas as $entrada)
                                         <tr>
-                                            <th scope="col">{{$entrada->id_libro_contable}}</th>
+                                            <th scope="col">{{ date('Y-m-d', strtotime($entrada->fecha))}}</th>
 
                                             <th scope="col">{{$entrada->nombre_tipo_contable}}</th>
                                             <th scope="col">{{$entrada->conceptos}}</th>
@@ -204,8 +232,8 @@
                                     <tbody>
                                         @foreach ($salidas as $salida)
                                         <tr>
-                                            <th scope="col">{{$salida->id_libro_contable}}</th>
-
+                                            <th scope="col">{{ date('Y-m-d', strtotime($salida->fecha))}}</th>
+                                            
                                             <th scope="col">{{$salida->nombre_tipo_contable}}</th>
                                             <th scope="col">{{$salida->conceptos}}</th>
                                             <th scope="col">{{$salida->valor}}</th>
@@ -223,6 +251,5 @@
         </div>
     </section>
 
-
-   
+ 
 @endsection

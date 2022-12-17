@@ -123,9 +123,36 @@ class LibroContabilidadController extends Controller
     $vehiculi=DB::table("vehiculos")->where("id_vehiculo","=",$id)->first();
       
     $libro_contables=DB::table("libro_contabilidads")
+    
     ->join('tipo__contables','tipo__contables.id_tipo_contable','=','libro_contabilidads.libro_tipo_contable')
     ->where("libro_vehiculo","=",$id)
+    ->select("libro_contabilidads.*","tipo__contables.*","libro_contabilidads.created_at AS fecha")
     ->get();
+    list($entradas,$salidas)= self::dividir_asientos($libro_contables);
+    $valores=self::valores_totales($entradas,$salidas);
+    
+    // return response(["data"=>$libro_contable]);
+     $tipos_entradas=DB::table("tipo__contables")->where("dato_tipo_contable","=","Entrada")->get();
+     $tipos_salidas=DB::table("tipo__contables")->where("dato_tipo_contable","=","Salida")->get();
+     return view('dashboards.consulta_contable',compact("tipos_entradas","vehiculi","tipos_salidas","entradas","salidas","valores"));
+   }
+
+   public function mirar_libro_fecha($id,Request $request){
+  // return response(["data"=>$request->all()]);
+    $vehiculi=DB::table("vehiculos")->where("id_vehiculo","=",$id)->first();
+    $desde = $request->desde;
+    $hasta = $request->hasta;
+    $libro_contables=DB::table("libro_contabilidads")
+    ->join('tipo__contables','tipo__contables.id_tipo_contable','=','libro_contabilidads.libro_tipo_contable')
+    ->where("libro_vehiculo","=",$id)
+    ->where("libro_vehiculo","=",$vehiculi->id_vehiculo)
+    ->where(function($query) use ($desde,$hasta){
+     $query->whereBetween('libro_contabilidads.created_at', [$desde, $hasta]);
+ })
+    //->whereBetween('libro_contabilidads.created_at', [$f1, $f2])
+    ->select("libro_contabilidads.*","tipo__contables.*","libro_contabilidads.created_at AS fecha")
+    ->get();
+    //return response(["data"=>$libro_contables]);
     list($entradas,$salidas)= self::dividir_asientos($libro_contables);
     $valores=self::valores_totales($entradas,$salidas);
     
