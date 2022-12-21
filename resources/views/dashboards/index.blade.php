@@ -187,8 +187,12 @@ $data=$data["data"];
                                 <a href="{{ route('crear_vehiculo') }}">Registro Vehiculos</a>
                             </li>
                             <li>
-                                <a href="{{ route('listar_vehiculo') }}">Listar Vehiculos</a>
+                                <a href="{{ route('listar_vehiculo') }}">Listar Vehiculos Propios</a>
                             </li>
+                            <li>
+                                <a href="{{ route('listar_vehiculo_subarriendo') }}">Listar Vehiculos Subarriendo</a>
+                            </li>
+                            
                         </ul>
                     </li>
                     <li>
@@ -229,6 +233,9 @@ $data=$data["data"];
                             
                             <li>
                                 <a href="{{ url('contabilidad') }}">Libro Contable</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('contabilidad_sub') }}">Libro Contable Subalquiler</a>
                             </li>
                         </ul>
                     </li>

@@ -55,7 +55,7 @@ Route::post('listar_cliente',"ClientesController@index_id")->name("serial_buscar
 
 
 Route::get('listar_vehiculo',"VehiculosController@index")->name("listar_vehiculo");
-
+Route::get('listar_vehiculo_subarriendo',"VehiculosController@subs")->name("listar_vehiculo_subarriendo");
 Route::get('crear_vehiculos', function () {
     return view('dashboards.crear_vehiculos');
 })->name("crear_vehiculo");
@@ -158,6 +158,8 @@ Route::post('consulta_contable',"LibroContabilidadController@consulta")->name('c
 Route::post('registrar_libro',"LibroContabilidadController@store")->name('registrar_libro');
 
 Route::get('contabilidad',"LibroContabilidadController@libro")->name("contabilidad");
+Route::get('contabilidad_sub',"LibroContabilidadController@libro_sub")->name("contabilidad_sub");
+
 Route::get('contabilidad/{id}',"LibroContabilidadController@mirar_libro")->name("contabilidad_unica");
 Route::post('libro_contable',"LibroContabilidadController@store")->name('crear_contabilidad');
 Route::post('filtro_fecha/{id}',"LibroContabilidadController@mirar_libro_fecha")->name('filtro_fecha');

@@ -76,7 +76,22 @@
                                             <div class="col-md-6"><b>Precio Alquiler:</b><input name="precio_alquiler" value="{{ $vehiculo->precio_alquiler }}">
                                                  </div>
                                         </div>
-
+                                        <div class="row pt-4">
+                                        <div class="col-md-6"><b>Tipo de dueño</b>
+                                        <select  id="tipo_dueno" name="tipo_dueno">
+                                                    @if ($vehiculo->tipo_dueño=="Propio")
+                                                        <option value="Propio" selected>Propio</option>
+                                                        <option value="Sub Alquiler" >Sub Alquiler</option>
+                                                    @else
+                                                    <option value="Sub Alquiler" selected>Sub Alquiler</option>
+                                                    <option value="Propio" >Propio</option>
+                                                    @endif
+                                                 
+                                        
+                                                </select>
+</div>
+                                        </div>
+                                        
                                       
                                       
                                     </div>

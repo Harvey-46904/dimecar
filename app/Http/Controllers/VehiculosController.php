@@ -20,9 +20,19 @@ class VehiculosController extends Controller
         
         $vehiculos=DB::table('vehiculos')
         ->select()
+        ->where("tipo_dueño","=","Propio")
         ->get();
         return view('dashboards.lista_vehiculos',compact("vehiculos"));
        
+    }
+
+    public function subs(){
+        $vehiculos=DB::table('vehiculos')
+        ->select()
+        ->where("tipo_dueño","=","Sub Alquiler")
+        ->get();
+        return view('dashboards.lista_vehiculos_sub',compact("vehiculos"));
+        
     }
 
     public function vehiculos_inicio(){
@@ -72,7 +82,7 @@ class VehiculosController extends Controller
         $crear_vehiculo->precio_lavado=$request->precio_lavado;
         $crear_vehiculo->disponibilidad=1;
         $crear_vehiculo->foto_vehiculo=$ldate.$nombre;
-        
+        $crear_vehiculo->tipo_dueño=$request->tipo_dueno;
         $crear_vehiculo->save();
        $id= $crear_vehiculo->id_vehiculo;
       

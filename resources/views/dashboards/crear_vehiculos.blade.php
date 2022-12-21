@@ -79,7 +79,16 @@
                                     <input type="text" id="precio_lavado" name="precio_lavado" class="form-control" placeholder="30.000">
                                 </div>
                             </div>
-                            
+                            <label for="precio_lavado">Tipo De Dueño</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                <select  id="tipo_dueno" name="tipo_dueno" class="form-select">
+                                <option value="Propio" selected>Propio</option>
+                                <option value="Sub Alquiler" >Sub Alquiler</option>
+                            </select>
+                                </div>
+                            </div>
+                           
 
                             <label for="disponibilidad">Cargar Foto de Vehiculo</label>
                             <div class="form-group">

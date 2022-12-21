@@ -202,6 +202,7 @@ class EstadoVehiculoController extends Controller
         $actualizar_vehiculo->precio_alquiler=$request->precio_alquiler;
         $actualizar_vehiculo->precio_lavado=$request->precio_lavado;
         $actualizar_vehiculo->disponibilidad=$request->disponibilidad;
+        $actualizar_vehiculo->tipo_dueño=$request->tipo_dueno;
         $actualizar_vehiculo->save();
         //actualizar estado
         $id_estado=DB::table("estado_vehiculos")->select("id")->where("vehiculo_id","=",$id_vehiculo)->first();

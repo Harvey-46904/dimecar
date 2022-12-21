@@ -114,7 +114,13 @@ class LibroContabilidadController extends Controller
     public function libro(){
         $tipos_entradas=DB::table("tipo__contables")->where("dato_tipo_contable","=","Entrada")->get();
         $tipos_salidas=DB::table("tipo__contables")->where("dato_tipo_contable","=","Salida")->get();
-        $carros=DB::table("vehiculos")->select()->get();
+        $carros=DB::table("vehiculos")->select()->where("tipo_dueño","=","Propio")->get();
+        return view('dashboards.libro_contable',compact("carros","tipos_entradas","tipos_salidas"));
+    }
+    public function libro_sub(){
+        $tipos_entradas=DB::table("tipo__contables")->where("dato_tipo_contable","=","Entrada")->get();
+        $tipos_salidas=DB::table("tipo__contables")->where("dato_tipo_contable","=","Salida")->get();
+        $carros=DB::table("vehiculos")->select()->where("tipo_dueño","=","Sub Alquiler")->get();
         return view('dashboards.libro_contable',compact("carros","tipos_entradas","tipos_salidas"));
     }
 

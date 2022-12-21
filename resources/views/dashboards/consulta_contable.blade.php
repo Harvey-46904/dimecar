@@ -31,20 +31,20 @@
                         <div class="header">
                         <form method="POST" action="{{ route('filtro_fecha', $vehiculi->id_vehiculo) }}" >
                         @csrf
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center ">
                                        
-                                        <div class="col-md-3 ">
+                                        <div class="col-md-3 border border-secondary ">
                                             <label for="nombre_vehiculo">Desde</label>
                                             <div class="form-group">
                                                 <input class="form-control" type="date" id="d" name="desde">
                                             </div>
                                         </div>
-                                        <div class="col-md-3 "> <label for="nombre_vehiculo">Hasta</label>
+                                        <div class="col-md-3 border border-secondary"> <label for="nombre_vehiculo">Hasta</label>
                                             <div class="form-group">
                                                 <input class="form-control" type="date" id="h" name="hasta">
                                             </div>
                                         </div>
-                                        <div class="col-md-2 text-center"> <br>
+                                        <div class="col-md-2 text-center border border-secondary"> <br>
                                             <div class="form-group">
                                                 <input class="btn btn-primary " type="submit" id="h" value="Filtrar">
                                             </div>
@@ -195,9 +195,9 @@
                                 <div class="col-md-6">
                                     <h3 class="text-center">Entradas</h3>
                                 <table class="table table-striped">
-                                    <thead>
+                                    <thead class="text-dark">
                                         <tr>
-                                            <th scope="col">Fecha</th>
+                                            <th scope="col text-danger">Fecha</th>
 
                                             <th scope="col">Nombre</th>
                                             <th scope="col">Concepto</th>
@@ -206,7 +206,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($entradas as $entrada)
-                                        <tr>
+                                        <tr class="text-dark">
                                             <th scope="col">{{ date('Y-m-d', strtotime($entrada->fecha))}}</th>
 
                                             <th scope="col">{{$entrada->nombre_tipo_contable}}</th>
@@ -220,7 +220,7 @@
                                 <div class="col-md-6">
                                 <h3 class="text-center">Salidas</h3>
                                 <table class="table table-striped">
-                                    <thead>
+                                <thead class="text-dark">
                                         <tr>
                                             <th scope="col">Fecha</th>
 
@@ -231,7 +231,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($salidas as $salida)
-                                        <tr>
+                                        <tr class="text-dark">
                                             <th scope="col">{{ date('Y-m-d', strtotime($salida->fecha))}}</th>
                                             
                                             <th scope="col">{{$salida->nombre_tipo_contable}}</th>
