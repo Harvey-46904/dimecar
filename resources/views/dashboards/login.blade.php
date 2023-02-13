@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>LOGIN - RENTACAR PASTO</title>
+	<title>LOGIN - DIMECARS</title>
     <link href="{!! asset('dash/css/style-login.css') !!}" rel="stylesheet">
 	<link rel="icon" href="{!! asset('webpage/img/icon-webpage.png') !!}" />
 </head>
